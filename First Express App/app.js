@@ -51,7 +51,13 @@ app.listen(process.env.PORT,process.env.IP,function(){
 
 // To see the OUTPUT ->
 // In terminal, first start the SERVER by typing -> node app.js.
+
 // Then Go to(cloud9 specific) 
 // https://express-framework-shivam1097.c9users.io/ 
 // https://express-framework-shivam1097.c9users.io/dog
 // https://express-framework-shivam1097.c9users.io/bye
+
+// For othe IDE,go to the port no specified , i.e ->
+// localhost:3000 
+
+// press ctrl+c to stop the Server.
