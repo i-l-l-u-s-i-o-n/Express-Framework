@@ -1,0 +1,7 @@
+Difference between <%=   ......   %> and   <%  .......  %>
+
+
+ <%= .. %> is used to get some value from the parameter.
+
+
+ <% .. %> is used to write some logic such as loops and contitions.
