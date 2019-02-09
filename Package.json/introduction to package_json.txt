@@ -1,0 +1,24 @@
+ JSON -> JavaScript object notation
+ 
+ These files are required to hold the metdata relevant to specific projects.
+ 
+ When we install express using 'npm insatll express', a file 'package.json' is 
+ already inside the 'node_modules/express'.
+ 
+ We can also create our own package .json manually.
+ 
+ Following command is used to create package.json file ->
+ 
+ ============================================================================================
+|                                   npm init                                                 |
+ ============================================================================================
+ 
+ 
+ Now if we install any package ,we have to add it to dependencies section in package.json.
+ We can do it by ->
+ 
+ ============================================================================================
+|                                   npm install <package_name> --save                         |
+ ============================================================================================
+ 
+ By --save tag the package details will automatically added under dependencies section.
