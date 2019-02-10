@@ -8,8 +8,13 @@
 var request=require("request");
 
 request("https://jsonplaceholder.typicode.com/users/1",function(error,response,body){
-    var parsedData= JSON.parse(body);
-    console.log(parsedData);
-    console.log("Name : "+parsedData.name);
-    console.log("Zip code : "+ parsedData.address.zipcode);
+   
+   
+   //Checking if there is no error or status code is 200 i.e OK.
+   if (!error && response.statusCode == 200) {
+        var parsedData= JSON.parse(body);
+        console.log(parsedData);
+        console.log("Name : "+parsedData.name);
+        console.log("Zip code : "+ parsedData.address.zipcode);
+   }
 })
