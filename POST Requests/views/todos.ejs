@@ -1,0 +1,18 @@
+<link type="text/css" rel="stylesheet" href="/app.css">
+<h1> ======== ======= ======= Your ToDo items ======= ====== =======</h1>
+
+<% todos.forEach(function(todo){ %>
+    <li>
+        <%= todo %>
+    </li>
+<% }) %>
+<p></p>
+<p>Add ToDo -></p>
+<form action="/addTodo" method="POST">
+    <input type="text" name="newTodoItem" placeholder="Enter ToDO : "/>
+    <input type="submit" value="Submit"/>
+</form>
+
+<form action="/" method="GET">
+    <button>HOME</button>
+</form>
