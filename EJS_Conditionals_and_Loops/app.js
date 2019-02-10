@@ -21,6 +21,11 @@ app.get("/posts",function(req,res){
     res.render("posts.ejs",{posts_details: posts});   // Pass parameter as the object.
 });
 
+
+app.get("/if/:name",function (req,res){
+    res.render("condition.ejs",{name : req.params.name})
+});
+
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("Server Started");
 });
