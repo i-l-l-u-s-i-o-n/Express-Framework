@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express,',
+1 verbose cli   'ejs',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData express,
+8 silly fetchPackageMetaData ejs
+9 silly fetchOtherPackageData express,
+10 silly cache add args [ 'express,', null ]
+11 verbose cache add spec express,
+12 silly fetchNamedPackageData ejs
+13 silly mapToRegistry name ejs
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry data Result {
+16 silly mapToRegistry   raw: 'ejs',
+16 silly mapToRegistry   scope: null,
+16 silly mapToRegistry   escapedName: 'ejs',
+16 silly mapToRegistry   name: 'ejs',
+16 silly mapToRegistry   rawSpec: '',
+16 silly mapToRegistry   spec: 'latest',
+16 silly mapToRegistry   type: 'tag' }
+17 silly mapToRegistry uri https://registry.npmjs.org/ejs
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'express,',
+18 silly cache add   scope: null,
+18 silly cache add   escapedName: null,
+18 silly cache add   name: null,
+18 silly cache add   rawSpec: 'express,',
+18 silly cache add   spec: '/home/ubuntu/workspace/Express-Framework/express,',
+18 silly cache add   type: 'local' }
+19 error addLocal Could not install /home/ubuntu/workspace/Express-Framework/express,
+20 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/home/ubuntu/workspace/Express-Framework/express,'
+20 silly fetchPackageMetaData     at Error (native)
+20 silly fetchPackageMetaData  error for express, { Error: ENOENT: no such file or directory, open '/home/ubuntu/workspace/Express-Framework/express,'
+20 silly fetchPackageMetaData     at Error (native)
+20 silly fetchPackageMetaData   errno: -2,
+20 silly fetchPackageMetaData   code: 'ENOENT',
+20 silly fetchPackageMetaData   syscall: 'open',
+20 silly fetchPackageMetaData   path: '/home/ubuntu/workspace/Express-Framework/express,' }
+21 verbose request uri https://registry.npmjs.org/ejs
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 3:23:52 PM
+24 verbose request id b03b9558ec5eab6e
+25 verbose etag W/"17682c484328abcd2ddf27bad35a86eb"
+26 verbose lastModified Sat, 26 May 2018 22:51:16 GMT
+27 http request GET https://registry.npmjs.org/ejs
+28 http 304 https://registry.npmjs.org/ejs
+29 verbose headers { date: 'Thu, 14 Feb 2019 15:23:52 GMT',
+29 verbose headers   connection: 'keep-alive',
+29 verbose headers   'set-cookie': [ '__cfduid=deac08e4ca68713e04e0bb0250e5e409a1550157832; expires=Fri, 14-Feb-20 15:23:52 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+29 verbose headers   'cf-cache-status': 'HIT',
+29 verbose headers   'cache-control': 'max-age=300',
+29 verbose headers   'cf-ray': '4a9089d72ead4596-TPE',
+29 verbose headers   etag: '"17682c484328abcd2ddf27bad35a86eb"',
+29 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+29 verbose headers   'last-modified': 'Sat, 26 May 2018 22:51:16 GMT',
+29 verbose headers   vary: 'accept-encoding, accept',
+29 verbose headers   server: 'cloudflare' }
+30 silly get cb [ 304,
+30 silly get   { date: 'Thu, 14 Feb 2019 15:23:52 GMT',
+30 silly get     connection: 'keep-alive',
+30 silly get     'set-cookie': [ '__cfduid=deac08e4ca68713e04e0bb0250e5e409a1550157832; expires=Fri, 14-Feb-20 15:23:52 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+30 silly get     'cf-cache-status': 'HIT',
+30 silly get     'cache-control': 'max-age=300',
+30 silly get     'cf-ray': '4a9089d72ead4596-TPE',
+30 silly get     etag: '"17682c484328abcd2ddf27bad35a86eb"',
+30 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+30 silly get     'last-modified': 'Sat, 26 May 2018 22:51:16 GMT',
+30 silly get     vary: 'accept-encoding, accept',
+30 silly get     server: 'cloudflare' } ]
+31 verbose etag https://registry.npmjs.org/ejs from cache
+32 verbose get saving ejs to /home/ubuntu/.npm/registry.npmjs.org/ejs/.cache.json
+33 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+34 silly rollbackFailedOptional Starting
+35 silly rollbackFailedOptional Finishing
+36 silly runTopLevelLifecycles Finishing
+37 silly install printInstalled
+38 verbose stack Error: ENOENT: no such file or directory, open '/home/ubuntu/workspace/Express-Framework/express,'
+38 verbose stack     at Error (native)
+39 verbose cwd /home/ubuntu/workspace/Express-Framework
+40 error Linux 4.9.120-c9
+41 error argv "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node" "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm" "install" "express," "ejs" "--save"
+42 error node v6.11.2
+43 error npm  v3.10.10
+44 error path /home/ubuntu/workspace/Express-Framework/express,
+45 error code ENOENT
+46 error errno -2
+47 error syscall open
+48 error enoent ENOENT: no such file or directory, open '/home/ubuntu/workspace/Express-Framework/express,'
+49 error enoent ENOENT: no such file or directory, open '/home/ubuntu/workspace/Express-Framework/express,'
+49 error enoent This is most likely not a problem with npm itself
+49 error enoent and is related to npm not being able to find a file.
+50 verbose exit [ -2, true ]
