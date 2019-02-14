@@ -1,0 +1,19 @@
+body{
+    background: url("https://cdn.mos.cms.futurecdn.net/hqK5s8QqrsuaGs4MsTzAQE-650-80.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+h1{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: aliceblue
+}
+#s{
+    margin-top: 25%;
+}
