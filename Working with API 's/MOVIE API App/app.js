@@ -32,10 +32,8 @@ app.get("/result",function(req,res){
             }else{
                 res.send("Not Found !");
             }
-            
         }
-    
-});
+    });
 });
 
 
