@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +16,16 @@
             <img src=<%= movie.Poster %> class="card-img-top image" alt="...">
             <div class="card-body">
               <h5 class="card-title">
-                  <a href="/full_detail">
+                  
+                  <%/* Setting the link for the clicked movie . /*%>
+                  
+                   <%/* link=`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=thewdb`  */%>
+                   
+                   <% link=`/full_detail/${movie.imdbID}` %>
+                  
+                  
+                  
+                  <a href=<%= link %>>
                   <%= movie.Title %></a>
               </h5>
               <p class="card-text"> <%= movie.Year %></p>
@@ -30,4 +36,5 @@
      </div>
 
     </body>
+    <script src="full_detail.js"></script>
 </html>
