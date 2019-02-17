@@ -4,6 +4,8 @@
     <head>
         <title>RESULTS</title>
         <link rel="stylesheet" href="details.css" type="text/css" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -13,7 +15,7 @@
     <div class="container">
     <% data["Search"].forEach(function(movie){ %>
         <div class="card f" style="width: 18rem;">
-            <img src=<%= movie.Poster %> class="card-img-top image" alt="...">
+            <img src=<%= movie.Poster %> class="card-img-top image" alt="Image Not Available !">
             <div class="card-body">
               <h5 class="card-title">
                   
@@ -25,7 +27,7 @@
                   
                   
                   
-                  <a href=<%= link %>>
+                  <a href=<%= link %> id="title">
                   <%= movie.Title %></a>
               </h5>
               <p class="card-text"> <%= movie.Year %></p>

@@ -1,7 +1,6 @@
 body{
-    background-image: url("https://newevolutiondesigns.com/images/freebies/black-wallpaper-10.jpg");
+    background-image: url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
     background-repeat: repeat;
-
 }
 .f{
     margin-left: 5%;
@@ -11,4 +10,15 @@ body{
 }
 .image{
     height:400px;
+}
+.card-body{
+    background:#222222;
+}
+#title{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+.card-text{
+    color: white;
+    text-align: bottom;
 }

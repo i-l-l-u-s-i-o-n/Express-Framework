@@ -1,3 +1,32 @@
 .custom{
-    margin-top: 100px;
+    margin-top: 5%;
+}
+body{
+    background-image: url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
+    background-repeat: repeat;
+
+}
+.display-4{
+    margin-top:0;
+    padding-top=1%;
+}
+#j {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+     background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: .3rem;
+}
+.text_color{
+    color:white;
+}
+
+ul{
+    list-style: none;  /*  Removing list bullets */
+}
+
+#heading{
+    font-size: 1.5rem;
+    padding-right: 5%;
+    padding-bottom:10px;
+    line-height: 1.5;
 }

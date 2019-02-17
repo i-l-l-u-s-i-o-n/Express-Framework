@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="/home.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
 </head>
 <body>
 
-<h1 class="display-1 text-center bg-info py-3 border-bottom">..........</h1>
+<h1 class="display-2 text-center bg-info py-3 border-bottom">Movie Wiki</h1>
 
 <div class="container">
     <div class="row justify-content-center align-content-center" id="s"  >
          <form action="/result" method="GET">
-            <input type="text" name="search">
-            <input type="submit">
+            <input class="form-control mr-sm-2 d-inline" type="text" id="search_text_input" placeholder="Ask wiki !" name="search">
+                <a href="#" id="link"><button class="btn btn-outline-success btn-sm" type="submit" id="b">SEARCH</button></a>
         </form>
     </div>
 </div>

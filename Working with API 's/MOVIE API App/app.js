@@ -48,7 +48,7 @@ app.get("/full_detail/:imdbId",function(req,res){
         if (!error && response.statusCode == 200) {
             data=JSON.parse(body);
             console.log(data);
-            res.render("full_detail.ejs",{data : data});
+            res.render("full_detail.ejs",{data: data});
         }
     });
 });

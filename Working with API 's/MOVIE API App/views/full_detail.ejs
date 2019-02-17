@@ -11,48 +11,48 @@
         <div class="container">
             <div class="row custom">
                 <div class="col-9 custom">
-                    <div class="jumbotron">
+                    <div class="jumbotron" id="j">
                         
-                            <h1 class="display-4"><%= data.Title %></h1>
+                            <h1 class="display-4 text_color"><%= data.Title %></h1>
                             <p class="lead">
                                 
                                 <% data.Plot%>
                                 
-                                <ul>
+                                <ul class="text_color">
                                     <li>
-                                        YEAR : <%= data.Year %>
+                                        <span id="heading"> YEAR : </span> <%= data.Year %>
                                     </li>
                                      <li>
-                                        RELEASE DATE : <%= data.Released %>
+                                        <span id="heading"> RELEASE DATE : </span> <%= data.Released %>
                                     </li>
                                      <li>
-                                        RUNTIME : <%= data.Runtime %>
+                                        <span id="heading"> RUNTIME : </span> <%= data.Runtime %>
                                     </li>
                                      <li>
-                                        GENRE : <%= data.Genre %>
+                                        <span id="heading"> GENRE : </span><%= data.Genre %>
                                     </li>
                                      <li>
-                                        DIRECTOR : <%= data.Director %>
+                                        <span id="heading"> DIRECTOR : </span><%= data.Director %>
                                     </li>
                                      <li>
-                                        WRITER : <%= data.Writer %>
+                                        <span id="heading"> WRITER : </span><%= data.Writer %>
                                     </li>
                                      <li>
-                                        ACTORS : <%= data.Actors %>
+                                        <span id="heading"> ACTORS : </span><%= data.Actors %>
                                     </li>
                                      <li>
-                                        LANGUAGE : <%= data.Language %>
+                                        <span id="heading"> LANGUAGE : </span><%= data.Language %>
                                     </li>
                                 </ul>
                                     
                             </p>
-                            <hr class="my-4">
+                            <hr class="my-4 ">
                             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                         </div>
                        
                     </div>
-                     <div class="col-3 custom">
+                     <div class="col-3 custom align-items-center">
                             <img src=<%=data.Poster %>></img>
                         </div>
             </div>

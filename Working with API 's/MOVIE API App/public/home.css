@@ -1,5 +1,6 @@
 body{
-    background: url("https://images.pexels.com/photos/562211/pexels-photo-562211.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    /*background: url("https://images.pexels.com/photos/562211/pexels-photo-562211.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");*/
+    background:url("https://hdqwalls.com/download/dark-abstract-shapes-qp-1920x1080.jpg");
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,8 +13,23 @@ h1{
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: aliceblue
+    
+    background:url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
+    
+    color: aliceblue;
+    font-family: 'Comfortaa', cursive;
+    font-weight:400;
+    letter-spacing: 4px;
+    word-spacing:10px;
 }
 #s{
     margin-top: 25%;
+}
+#search_text_input{
+    width: 350px;
+    height: 30px;
+}
+#b{
+    height: 30px;
+    margin: auto;
 }
