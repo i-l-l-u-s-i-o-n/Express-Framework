@@ -1,5 +1,6 @@
 body{
     background-image: url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
+    /*background:url("https://hdqwalls.com/download/dark-3d-shapes-floor-4a-1366x768.jpg");*/
     background-repeat: repeat;
 }
 .f{
@@ -12,13 +13,20 @@ body{
     height:400px;
 }
 .card-body{
-    background:#222222;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 #title{
     font-family: 'Montserrat', sans-serif;
     color:white;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    word-spacing: 5px;
 }
-.card-text{
+.year{
     color: white;
-    text-align: bottom;
+    letter-spacing:3px;
+    
+}
+#card{
+    background-color: rgba(0, 0, 0, 0.0);
 }

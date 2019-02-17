@@ -3,6 +3,7 @@
     <head>
         <title>RESULTS</title>
         <link rel="stylesheet" href="/full_detail.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -13,35 +14,35 @@
                 <div class="col-9 custom">
                     <div class="jumbotron" id="j">
                         
-                            <h1 class="display-4 text_color"><%= data.Title %></h1>
+                            <h1 class="display-4 text_color rounded" id="title"><%= data.Title %></h1>
                             <p class="lead">
                                 
                                 <% data.Plot%>
                                 
-                                <ul class="text_color">
+                                <ul >
                                     <li>
-                                        <span id="heading"> YEAR : </span> <%= data.Year %>
+                                        <span id="heading" class="rounded-pill"> YEAR : </span> <span id="detail"> <%= data.Year %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> RELEASE DATE : </span> <%= data.Released %>
+                                        <span id="heading" class="rounded-pill"> RELEASE DATE : </span> <span id="detail"> <%= data.Released %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> RUNTIME : </span> <%= data.Runtime %>
+                                        <span id="heading" class="rounded-pill"> RUNTIME : </span> <span id="detail"> <%= data.Runtime %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> GENRE : </span><%= data.Genre %>
+                                        <span id="heading" class="rounded-pill"> GENRE : </span> <span id="detail"> <%= data.Genre %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> DIRECTOR : </span><%= data.Director %>
+                                        <span id="heading" class="rounded-pill"> DIRECTOR : </span> <span id="detail"> <%= data.Director %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> WRITER : </span><%= data.Writer %>
+                                        <span id="heading" class="rounded-pill"> WRITER : </span> <span id="detail"> <%= data.Writer %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> ACTORS : </span><%= data.Actors %>
+                                        <span id="heading" class="rounded-pill"> ACTORS : </span> <span id="detail"> <%= data.Actors %> </span>
                                     </li>
                                      <li>
-                                        <span id="heading"> LANGUAGE : </span><%= data.Language %>
+                                        <span id="heading" class="rounded-pill"> LANGUAGE : </span> <span id="detail"> <%= data.Language %> </span>
                                     </li>
                                 </ul>
                                     
@@ -52,7 +53,7 @@
                         </div>
                        
                     </div>
-                     <div class="col-3 custom align-items-center">
+                     <div class="col-3 custom align-items-between">
                             <img src=<%=data.Poster %>></img>
                         </div>
             </div>

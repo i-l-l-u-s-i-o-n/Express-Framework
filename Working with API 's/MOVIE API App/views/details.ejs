@@ -14,7 +14,7 @@
 
     <div class="container">
     <% data["Search"].forEach(function(movie){ %>
-        <div class="card f" style="width: 18rem;">
+        <div class="card f" id="card" style="width: 18rem;">
             <img src=<%= movie.Poster %> class="card-img-top image" alt="Image Not Available !">
             <div class="card-body">
               <h5 class="card-title">
@@ -30,7 +30,7 @@
                   <a href=<%= link %> id="title">
                   <%= movie.Title %></a>
               </h5>
-              <p class="card-text"> <%= movie.Year %></p>
+              <p class="year"> <%= movie.Year %></p>
               <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
           </div>
