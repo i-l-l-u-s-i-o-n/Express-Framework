@@ -14,7 +14,6 @@ app.get("/",function(req,res){
 });
 
 app.get("/result",function(req,res){
-    
     // we use req.query when the request is sent via GET and we use req.body when the request is sent via POST
     
     
@@ -26,7 +25,7 @@ app.get("/result",function(req,res){
             if(data.Response !=='False' ){
                 res.render("details.ejs",{data : data});
             }else{
-                res.send("Not Found !");
+                res.render("not_found_page.ejs");
             }
         }
     });

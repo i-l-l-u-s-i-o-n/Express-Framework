@@ -11,16 +11,20 @@ body{
 }
 .image{
     height:400px;
+    background: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.glennpeterjewelers.com%2Fstatic%2Fimages%2Ftemp-inventory-landing.jpg&imgrefurl=https%3A%2F%2Fwww.glennpeterjewelers.com%2Fcatalog%2Feleganza%2F7411700%2F&docid=YTPsT7bDrPKWTM&tbnid=30YmrwajBtf4nM%3A&vet=10ahUKEwjz-ojulszgAhVIvbwKHVfCCxIQMwg7KAMwAw..i&w=800&h=800&hl=en-IN&authuser=0&bih=772&biw=1517&q=image%20not%20available%20image&ved=0ahUKEwjz-ojulszgAhVIvbwKHVfCCxIQMwg7KAMwAw&iact=mrc&uact=8);
+
 }
 .card-body{
     background-color: rgba(0, 0, 0, 0.3);
 }
 #title{
+    
     font-family: 'Montserrat', sans-serif;
     color:white;
     text-transform: uppercase;
     letter-spacing:2px;
     word-spacing: 5px;
+    
 }
 .year{
     color: white;
@@ -29,4 +33,9 @@ body{
 }
 #card{
     background-color: rgba(0, 0, 0, 0.0);
+}
+.card-img-top {
+    background: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.glennpeterjewelers.com%2Fstatic%2Fimages%2Ftemp-inventory-landing.jpg&imgrefurl=https%3A%2F%2Fwww.glennpeterjewelers.com%2Fcatalog%2Feleganza%2F7411700%2F&docid=YTPsT7bDrPKWTM&tbnid=30YmrwajBtf4nM%3A&vet=10ahUKEwjz-ojulszgAhVIvbwKHVfCCxIQMwg7KAMwAw..i&w=800&h=800&hl=en-IN&authuser=0&bih=772&biw=1517&q=image%20not%20available%20image&ved=0ahUKEwjz-ojulszgAhVIvbwKHVfCCxIQMwg7KAMwAw&iact=mrc&uact=8);
+    
+    
 }

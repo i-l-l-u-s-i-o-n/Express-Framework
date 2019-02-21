@@ -10,7 +10,7 @@
     <body>
                 
         <div class="container">
-            <div class="row custom">
+            <div class="row custom align-items-center">
                 <div class="col-9 custom">
                     <div class="jumbotron" id="j">
                         
@@ -44,6 +44,20 @@
                                      <li>
                                         <span id="heading" class="rounded-pill"> LANGUAGE : </span> <span id="detail"> <%= data.Language %> </span>
                                     </li>
+                                     <li>
+                                         <% data.Ratings.forEach(function(rating){ %>
+                                         
+                                         <li> 
+                                              <span id="heading" class="rounded-pill"> rating.Source : </span> <span id="detail"> <%= rating.Value %> </span>
+                                         </li>
+                            
+                                         
+                                         <% }); %>
+                                          
+                                         
+                                         
+                                       
+                                    </li>
                                 </ul>
                                     
                             </p>
@@ -53,7 +67,7 @@
                         </div>
                        
                     </div>
-                     <div class="col-3 custom align-items-between">
+                     <div class="col-3 custom align-items-between align-items-center">
                             <img src=<%=data.Poster %>></img>
                         </div>
             </div>

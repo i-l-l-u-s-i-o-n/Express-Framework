@@ -15,7 +15,7 @@
     <div class="container">
     <% data["Search"].forEach(function(movie){ %>
         <div class="card f" id="card" style="width: 18rem;">
-            <img src=<%= movie.Poster %> class="card-img-top image" alt="Image Not Available !">
+            <img src=<%= movie.Poster %> class="card-img-top image" id="imgg" alt="Image Not Available !" onerror="this.src='https://www.glennpeterjewelers.com/static/images/temp-inventory-landing.jpg';">
             <div class="card-body">
               <h5 class="card-title">
                   
