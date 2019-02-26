@@ -1,6 +1,8 @@
 body{
-    /*background: url("https://images.pexels.com/photos/562211/pexels-photo-562211.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");*/
-    background:url("https://hdqwalls.com/download/dark-abstract-shapes-qp-1920x1080.jpg");
+     /*background:url("https://hdqwalls.com/download/dark-abstract-shapes-qp-1920x1080.jpg");*/
+    /*background: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/94/3257e49e3816e6a.jpg);*/
+    /*background: url(https://images.wallpaperscraft.com/image/leather_black_background_texture_wrinkles_cracks_75771_3840x2160.jpg);*/
+    background: url("background.jpg");
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,10 +17,13 @@ h1{
     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
     background:url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
+    /*background:url("header.jpg");*/
+    background-position:center;
     
     color: aliceblue;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight:400;
+    text-transform: uppercase;
     letter-spacing: 4px;
     word-spacing:10px;
 }
@@ -27,9 +32,4 @@ h1{
 }
 #search_text_input{
     width: 350px;
-    height: 30px;
-}
-#b{
-    height: 30px;
-    margin: auto;
 }

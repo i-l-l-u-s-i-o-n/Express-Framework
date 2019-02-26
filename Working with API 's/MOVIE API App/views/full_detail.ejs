@@ -9,10 +9,12 @@
     </head>
     <body>
                 
-        <div class="container">
+        <div class="container" style="margin-left:25%;">
             <div class="row custom align-items-center">
-                <div class="col-9 custom">
-                    <div class="jumbotron" id="j">
+                <div class="col-12 custom">
+                    <div class="row">
+                        <div class="col-7 custom">
+                        <div class="jumbotron" id="j">
                         
                             <h1 class="display-4 text_color rounded" id="title"><%= data.Title %></h1>
                             <p class="lead">
@@ -46,30 +48,29 @@
                                     </li>
                                      <li>
                                          <% data.Ratings.forEach(function(rating){ %>
-                                         
-                                         <li> 
-                                              <span id="heading" class="rounded-pill"> rating.Source : </span> <span id="detail"> <%= rating.Value %> </span>
+                                         <li>
+                                              <span id="heading" class="rounded-pill"> <%= rating.Source %>: </span> <span id="detail"> <%= rating.Value %> </span>
                                          </li>
-                            
-                                         
                                          <% }); %>
-                                          
-                                         
-                                         
-                                       
                                     </li>
                                 </ul>
                                     
                             </p>
                             <hr class="my-4 ">
-                            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                            <p></p>
                             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                         </div>
                        
                     </div>
-                     <div class="col-3 custom align-items-between align-items-center">
+                    <div class="col-2 custom align-items-between align-items-center">
                             <img src=<%=data.Poster %>></img>
+                    </div>
+                        
+                            
                         </div>
+                    </div>
+                    
+                     
             </div>
             
         </div>

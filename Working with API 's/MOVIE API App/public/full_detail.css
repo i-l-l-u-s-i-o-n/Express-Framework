@@ -1,8 +1,9 @@
 .custom{
-    margin-top: 5%;
+    margin-top: 2%;
 }
 body{
-    background-image: url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");
+    /*background-image: url("https://hdqwalls.com/download/dark-grey-abstract-shapes-4k-pi-1920x1080.jpg");*/
+    background: url("background.jpg");
     background-repeat: repeat;
 
 }
