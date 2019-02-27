@@ -9,7 +9,7 @@
     </head>
     <body>
                 
-        <div class="container" style="margin-left:25%;">
+        <div class="container" style="margin-left:10%;">
             <div class="row custom align-items-center">
                 <div class="col-12 custom">
                     <div class="row">
@@ -37,9 +37,7 @@
                                      <li>
                                         <span id="heading" class="rounded-pill"> DIRECTOR : </span> <span id="detail"> <%= data.Director %> </span>
                                     </li>
-                                     <li>
-                                        <span id="heading" class="rounded-pill"> WRITER : </span> <span id="detail"> <%= data.Writer %> </span>
-                                    </li>
+                                    
                                      <li>
                                         <span id="heading" class="rounded-pill"> ACTORS : </span> <span id="detail"> <%= data.Actors %> </span>
                                     </li>
@@ -53,12 +51,15 @@
                                          </li>
                                          <% }); %>
                                     </li>
+                                     <li>
+                                        <span id="heading" class="rounded-pill"> WRITER : </span> <span id="detail"> <%= data.Writer %> </span>
+                                    </li>
                                 </ul>
                                     
                             </p>
                             <hr class="my-4 ">
                             <p></p>
-                            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                            <a class="btn btn-primary" id="button" href="/" role="button">HOME</a>
                         </div>
                        
                     </div>
