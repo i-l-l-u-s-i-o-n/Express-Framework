@@ -58,8 +58,9 @@ li{
 
 #button{
     background:#222222;
-    background-color:#000000;
+    background-color:#222222;
     border-color:#9b9b9b;
+    margin-left: 40%;
 }
 .footer {
             position: static;
@@ -75,6 +76,7 @@ li{
             letter-spacing: 2px;
             font-family: "Montserrat", "Microsoft YaHei UI";
             color: #fcffea;
+            font-weight:100;
         }
 #inner{
     letter-spacing:2px;
