@@ -4,6 +4,7 @@ var express=require("express");
 var app=express();
 
 var data;
+var query="";
 
 var request=require("request");
 
@@ -13,15 +14,17 @@ app.get("/",function(req,res){
     res.render("home.ejs");
 });
 
-app.get("/result",function(req,res){
+
+app.get("/result", function(req,res){
     // we use req.query when the request is sent via GET and we use req.body when the request is sent via POST
     
     
-    var query=req.query.search;
+    query=req.query.search;
     var url="http://www.omdbapi.com/?s="+query+"&apikey=thewdb"
     request(url,function(error,response,body){
         if (!error && response.statusCode == 200) {
             data=JSON.parse(body);
+            console.log("RESULT = "+query);
             if(data.Response !=='False' ){
                 res.render("details.ejs",{data : data});
             }else{
@@ -44,8 +47,9 @@ app.get("/full_detail/:imdbId",function(req,res){
     request(link,function(error, response, body) {
         if (!error && response.statusCode == 200) {
             data=JSON.parse(body);
-            console.log(data);
-            res.render("full_detail.ejs",{data: data});
+            //console.log(data);
+            console.log("Full details : "+query);
+            res.render("full_detail.ejs",{data: data, result: query});
         }
     });
 });
