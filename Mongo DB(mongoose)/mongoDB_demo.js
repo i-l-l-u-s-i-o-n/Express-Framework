@@ -93,3 +93,14 @@ Cat.find({}, function (err, cats) {
         })
     }
 })
+
+// Returns the cat named Silly.
+Cat.find({name:"Silly"}, function (err, cats) {
+    if (err) {
+        console.log("Can't retrieve cats : ( " +err);
+    }else{
+        cats.forEach(function(cat){
+            console.log(cat);
+        })
+    }
+})
