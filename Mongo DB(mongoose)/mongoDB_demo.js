@@ -27,13 +27,16 @@ var Cat=mongoose.model("Cat",catSchema);
 
 
 
-// Adding a new cat to DB.
+// ==================================================== Adding a new cat to DB.====================================//
+
 var Silly=new Cat({
     name:"Silly",
     age:6,
     temprament:"Grouchy"
 });
 
+
+// To add, we use save().
 Silly.save(function(err,cat){
     if (err) {
         console.log("Cat not added to the DB");
@@ -43,3 +46,50 @@ Silly.save(function(err,cat){
     }
 })
 
+var Norris=new Cat({
+    name:"Norris",
+    age:11,
+    temprament:"Evil"
+});
+
+
+// To add, we use save().
+Norris.save(function(err,cat){
+    if (err) {
+        console.log("Cat not added to the DB");
+    }else{
+        console.log("Cat successfully added to the DB");
+        console.log(cat);
+    }
+})
+
+
+// ================================== Another method of adding record to db. ===========================================//
+
+Cat.create({
+    name:"Snow white",
+    age:8,
+    temprament:"Bland"
+}, function(err,cat){
+    if (err) {
+        console.log("Cat not added to the DB");
+    }else{
+        console.log("Cat successfully added to the DB");
+        console.log(cat);
+    }
+});
+
+
+//======================================= Retriving all cats from DB ==================================================//
+
+
+// It returns the array of cats.
+Cat.find({}, function (err, cats) {
+    if (err) {
+        console.log("Can't retrieve cats : ( " +err);
+    }else{
+        cats.forEach(function(cat){
+            console.log(cat);
+        })
+    }
+})
