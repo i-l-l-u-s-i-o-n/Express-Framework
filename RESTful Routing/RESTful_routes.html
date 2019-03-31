@@ -5,18 +5,24 @@
 <!-- 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
+    <style type="text/css">
+        body{
+            background:#222222;
+        }
+    </style>
 </head>
 <body>
 
 	<div class="container">
 
-			<div class="jumbotron">
+			<div class="jumbotron" style="margin-top:30px;" >
 				<h1>RESTful Routes</h1>
 				<p>A table of all 7 RESTful routes </p>
 			</div>
 			<table class="table table-hover table-bordered">
 			<thead>	
-				<tr>
+				<tr class="success">
 					<th>Name</th>
 					<th>Path</th>
 					<th>HTTP Verb</th>
@@ -25,7 +31,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr class="success">
 					<td>Index</td>
 					<td>/dogs</td>
 					<td>GET</td>
