@@ -1,0 +1,20 @@
+
+<style type="text/css">
+    img{
+        height: 300px;
+        width:300px;
+    }
+</style>
+
+<h1>Index page</h1>
+
+
+<%blogs.forEach(function(blog){ %>
+    <div>
+        <h2><%=blog.title%></h2>
+        <img src="<%= blog.image %>">
+        <p> <%= blog.body%></p>
+        <p> Created on : <%= blog.created%></p>
+    </div>
+    
+<% }) %>
