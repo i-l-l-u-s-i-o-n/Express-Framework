@@ -1,0 +1,21 @@
+i.icon{
+    font-size:2em;
+    /*margin-left:40px;*/
+}
+
+
+.container.main{
+    margin-top:7.0em;
+}
+
+img{
+    height:300px;
+    width:300px;
+}
+
+.ui.huge.header{
+    text-transform:uppercase;
+    letter-spacing:1px;
+    word-spacing:7px;
+    
+}

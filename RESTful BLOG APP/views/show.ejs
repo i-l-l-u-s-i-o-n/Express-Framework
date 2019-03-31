@@ -1,0 +1,37 @@
+<% include partials/header%>
+
+
+<div class="ui main text container segment">
+    <!--<div class="ui huge header"><%= blog.title%></div>-->
+    <!--<div class="ui top attached segment">-->
+    <!--    <div class="item">-->
+    <!--        <img class="ui centered rounded image" src="<%= blog.image %>">-->
+            
+    <!--    </div>-->
+    <!--</div>-->
+    
+    <!--<img >-->
+    <!--<p> <%= blog.body%></p>-->
+    <!--<p> Created on : <%= blog.created%></p>-->
+    
+    <div class="ui items">
+  <div class="item">
+    <!--<div class="image middle aligned">-->
+    <!--  <img src="<%= blog.image %>">-->
+    <!--</div>-->
+    <div class="content">
+      <div class="ui huge header"><%= blog.title%></div>
+      <div class="meta">
+        <span>Description</span>
+      </div>
+      <div class="description  ui segment">
+        <code><%= blog.body%></code>
+      </div>
+      <div class="extra">
+        Posted on : <%=blog.created.toDateString()%>
+      </div>
+    </div>
+  </div>
+        
+</div>
+<% include partials/header%>

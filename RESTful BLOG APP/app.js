@@ -62,9 +62,45 @@ app.get("/blogs",function(req,res){
         }
     })
     
+});
+
+
+// NEW route
+app.get("/blogs/new",function(req,res){
+    res.render("new");
 })
 
 
+// CREATE route
+app.post("/blogs",function(req,res){
+    // Create a blog.
+    // We have used blog[title] as a name for title, so that we can directly add the title to DB.
+    var data=req.body.blog;
+    Blog.create(data,function(err, newBlog){
+        if (err) {
+            console.log("Can't add new POST"+err);
+            res.render("new");
+        }else{
+            res.redirect("/blogs");
+        }
+    })
+})
+
+
+// SHOW route
+app.get("/blogs/:id",function(req, res) {
+    
+    // Retrieve the post for the ID.
+    Blog.findById(req.params.id,function(err,post){
+        if (err) {
+            console.log(err);
+            res.redirect("/blogs");
+        }else{
+            res.render("show", {blog: post});
+        }
+    })
+    
+});
 
 
 
