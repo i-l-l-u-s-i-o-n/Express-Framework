@@ -8,13 +8,15 @@
     }
 </style>
 
-<h1>Index page</h1>
 
 
 <%blogs.forEach(function(blog){ %>
-    <div>
+    <div class="ui main container">
         <h2><%=blog.title%></h2>
         <img src="<%= blog.image %>">
+        <p><%= blog.body.substring(0,60) %>.......</p>
+        <!--<p><%- blog.body.substring(0,60) %>.......</p>   If we use <%-   %> , we allow user to write html but it may be loophole as user can run the script-->
+        <!--using <script></script> tag.-->
         <p> Created on : <%= blog.created%></p>
         <a href="/blogs/<%= blog._id%>">See More</a>
     </div>

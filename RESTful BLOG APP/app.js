@@ -1,9 +1,10 @@
 // Created by Shivam Shukla.
 
-var bodyParser  =require("body-parser"),
-    express     =require("express"),
-    mongoose    =require("mongoose"),
-    app         =express();
+var bodyParser      =require("body-parser"),
+    express         =require("express"),
+    mongoose        =require("mongoose"),
+    app             =express(),
+    methodOverride  =require("method-override");
 
 
 // Connecting to mongo DB.
@@ -12,6 +13,7 @@ mongoose.connect("mongodb://localhost:27017/blog_app",{ useNewUrlParser: true })
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));    // See the UPDATE route.
 
 
 // Creating mongo Schema.
@@ -103,9 +105,51 @@ app.get("/blogs/:id",function(req, res) {
 });
 
 
+// EDIT route
+app.get("/blogs/:id/edit",function(req,res){
+    
+    Blog.findById(req.params.id,function (err,editBlog) {
+        if (err) {
+            console.log(err);
+            res.redirect("/blogs");
+        }else{
+            res.render("edit", {blog:editBlog});
+        }
+        
+    })
+
+})
 
 
 
+// UPDATE route
+
+// We can use app.post() to do everything, but as we are following RESTful convention, here we use PUT method.
+// But here's a problem!!!!!!!
+//==============================================================================================================================//
+//                                              FORM doesn't support PUT request.                                               //
+//==============================================================================================================================//
+
+// But there is also a solution.
+
+//==============================================================================================================================//
+//  We have to install a package "method-override" and the in the form section, we have to use method="POST" and write in the   //
+//  action="/blogs/<%= blog._id%>?_method=PUT". Here ?_method=PUT is just a querry string, which tells that it is a PUT request.//
+//==============================================================================================================================//
+app.put("/blogs/:id",function(req,res){
+     // Now update the data in the DATABASE. We will use following method.
+    //  Blog.findByIDAndUpdate(id, newData , callback)
+    
+    var data=req.body.blog;   // As we used blog[title],blog[body] and blog[image] in the form so we do not need to fetch each parameter, 
+                              // It will be automatically fetched as an object.
+    Blog.findByIdAndUpdate(req.params.id, data, function(err, updatedPost){
+        if (err) {
+            console.log(err);
+        }else{
+            res.redirect("/blogs"+req.params.id);
+        }
+    } )
+})
 
 
 
