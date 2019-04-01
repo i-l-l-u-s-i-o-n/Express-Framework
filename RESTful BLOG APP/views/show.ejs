@@ -1,3 +1,6 @@
+
+<!--Created by Shivam Shukla-->
+
 <% include partials/header%>
 
 
@@ -28,9 +31,15 @@
         <code><%= blog.body%></code>
       </div>
       <div class="extra">
-        Posted on : <%=blog.created.toDateString()%>
+        <p style="float:right;">Posted on : <%=blog.created.toDateString()%></p>
+        <a href="/blogs/<%= blog._id%>/edit" class=" ui orange basic button">Edit</a>
+        <form style="display:inline;" action="/blogs/<%= blog._id%>?_method=DELETE" method="POST" >
+          <button class="ui red basic button">Delete</button>
+        </form>
       </div>
+     
     </div>
+    
   </div>
         
 </div>

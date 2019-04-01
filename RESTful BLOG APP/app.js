@@ -146,12 +146,24 @@ app.put("/blogs/:id",function(req,res){
         if (err) {
             console.log(err);
         }else{
-            res.redirect("/blogs"+req.params.id);
+            res.redirect("/blogs/"+req.params.id);
         }
     } )
 })
 
 
+// DELETE route
+app.delete("/blogs/:id",function(req,res){
+    // Delete the specific blog from the database.
+    Blog.findByIdAndRemove(req.params.id,function(err){
+        if (err) {
+            console.log(err);
+            res.redirect("/blogs");
+        }else{
+            res.redirect("/blogs");
+        }
+    })
+})
 
 app.listen(process.env.PORT,process.env.ID,function(){
     console.log("Server Started!");
