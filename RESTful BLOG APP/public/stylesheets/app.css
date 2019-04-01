@@ -21,3 +21,13 @@ img{
     word-spacing:7px;
     
 }
+
+#title{
+    text-transform:uppercase;
+    letter-spacing:1px;
+    word-spacing:7px;
+}
+
+#show {
+    max-width:90%!important ;
+}

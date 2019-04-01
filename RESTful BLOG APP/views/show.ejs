@@ -4,7 +4,7 @@
 <% include partials/header%>
 
 
-<div class="ui main text container segment">
+<div class="ui main text container segment" id="show">
     <!--<div class="ui huge header"><%= blog.title%></div>-->
     <!--<div class="ui top attached segment">-->
     <!--    <div class="item">-->
@@ -28,7 +28,7 @@
         <span>Description</span>
       </div>
       <div class="description  ui segment">
-        <code><%= blog.body%></code>
+        <code><%- blog.body%></code>
       </div>
       <div class="extra">
         <p style="float:right;">Posted on : <%=blog.created.toDateString()%></p>

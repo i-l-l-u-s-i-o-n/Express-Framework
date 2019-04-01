@@ -7,7 +7,7 @@
 <div class="ui main text container segment">
     <div class="ui huge header">Edit Blog</div>
     <form class="ui form" method="POST" action="/blogs/<%= blog._id%>?_method=PUT">
-        <div class="field">
+        <div class="field" >
             <lable>Title:</lable>
         <input type="text" name="blog[title]" value="<%= blog.title %>" required>
         </div>

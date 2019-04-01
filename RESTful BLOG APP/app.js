@@ -4,7 +4,8 @@ var bodyParser      =require("body-parser"),
     express         =require("express"),
     mongoose        =require("mongoose"),
     app             =express(),
-    methodOverride  =require("method-override");
+    methodOverride  =require("method-override"),
+    expressSanitiser=require("express-sanitizer");   
 
 
 // Connecting to mongo DB.
@@ -14,6 +15,7 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));    // See the UPDATE route.
+app.use(expressSanitiser()); // It removes all the <script> tags from the input when we use <%- %> to allow user to write html. It prevents from running malacious scripts.
 
 
 // Creating mongo Schema.
@@ -76,6 +78,9 @@ app.get("/blogs/new",function(req,res){
 // CREATE route
 app.post("/blogs",function(req,res){
     // Create a blog.
+    
+    // Sanitising the body field of the blog.
+    req.body.blog.body=req.sanitize(req.body.blog.body);    // Removing all the <script> tags from the body field.
     // We have used blog[title] as a name for title, so that we can directly add the title to DB.
     var data=req.body.blog;
     Blog.create(data,function(err, newBlog){
