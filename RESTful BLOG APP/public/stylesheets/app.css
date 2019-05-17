@@ -1,5 +1,9 @@
 /*Created by Shivam Shukla*/
 
+
+/*body{*/
+/*    background:url("http://buzzsouthafrica.com/wp-content/uploads/blogs-2.jpg");*/
+/*}*/
 i.icon{
     font-size:2em;
     /*margin-left:40px;*/
@@ -24,6 +28,11 @@ img{
 
 #title{
     text-transform:uppercase;
+    letter-spacing:1px;
+    word-spacing:7px;
+}
+#content{
+    
     letter-spacing:1px;
     word-spacing:7px;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVIE WIKI</title>
+  
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/home.css" type="text/css" />
+
+</head>
+<body>
+
+<h1>Test</h1>
+
+<% for (var i=count; i<count+10 ;i++){  %>
+
+<div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title"><%= post[i].title %></h5>
+    <p class="card-text"><%= post[i].body %></p>
+    
+    <p class="card-text"><%= post[i].id %></p>
+  </div>
+</div>
+
+<% }%>
+
+<form method="GET" action="/">
+    
+    <a href="/posts/0"><input type="button" value="1" name="1"/></a>
+    <a href="/posts/10"><input type="button" value="2" name="2"/></a>
+    <a href="/posts/20"><input type="button" value="3" name="3"/></a>
+    <a href="/posts/30"><input type="button" value="4" name="4"/>
+    <a href="/posts/40"><input type="button" value="5" name="5"/>
+    <a href="/posts/50"><input type="button" value="6" name="6"/>
+    <a href="/posts/60"><input type="button" value="7" name="7"/>
+    <a href="/posts/70"><input type="button" value="8" name="8"/>
+    <a href="/posts/80"><input type="button" value="9" name="9"/>
+    <a href="/posts/90"><input type="button" value="10" name="10"/>
+    
+</form>
+
+</body>
+</html>

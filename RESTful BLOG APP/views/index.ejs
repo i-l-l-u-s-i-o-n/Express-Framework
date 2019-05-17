@@ -19,7 +19,7 @@
                 <div class="content">
                     <a id="title" href="/blogs/<%= blog._id%>" class="header"><%=blog.title%></a>
                     <div class="ui top attached segment description ">
-                    <p><%- blog.body.substring(0,60) %>.......</p>
+                    <p id="content"><%- blog.body.substring(0,60) %>...</p>
                 </div>
                 <div class="extra">
                     <p style="float:right;padding-top:30px;">Posted on : <%= blog.created.toDateString() %></p>
