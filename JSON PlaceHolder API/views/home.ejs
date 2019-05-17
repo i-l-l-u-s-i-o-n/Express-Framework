@@ -2,45 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOVIE WIKI</title>
+    <title>PostHub</title>
   
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="/home.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
 <body>
-
-<h1>Test</h1>
-
-<% for (var i=count; i<count+10 ;i++){  %>
-
-<div class="card" style="width: 100%;">
-  <div class="card-body">
-    <h5 class="card-title"><%= post[i].title %></h5>
-    <p class="card-text"><%= post[i].body %></p>
     
-    <p class="card-text"><%= post[i].id %></p>
-  </div>
-</div>
-
-<% }%>
-
-<form method="GET" action="/">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i class="fab fa-dashcube"></i>  PostHub</a>
+     
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Post....." aria-label="Search">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
     
-    <a href="/posts/0"><input type="button" value="1" name="1"/></a>
-    <a href="/posts/10"><input type="button" value="2" name="2"/></a>
-    <a href="/posts/20"><input type="button" value="3" name="3"/></a>
-    <a href="/posts/30"><input type="button" value="4" name="4"/>
-    <a href="/posts/40"><input type="button" value="5" name="5"/>
-    <a href="/posts/50"><input type="button" value="6" name="6"/>
-    <a href="/posts/60"><input type="button" value="7" name="7"/>
-    <a href="/posts/70"><input type="button" value="8" name="8"/>
-    <a href="/posts/80"><input type="button" value="9" name="9"/>
-    <a href="/posts/90"><input type="button" value="10" name="10"/>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4 header_text"><i class="fab fa-dashcube"></i>  PostHub</h1>
+            <p class="lead header_text">Let's make some post.</p>
+            <a class="btn btn-md header_text btn-light btn-no-outline" href="#" role="button">LogIn&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></a>
+            <a class="btn btn-md ml-3 btn-light" href="#" role="button">SignUp&nbsp;&nbsp;<i class="fas fa-user-plus"></i></a>
+          </div>
+        </div>
+        
+        <% for (var i=count; i<count+10 ;i++){  %>
+
+        <div class="card center">
+          <div class="card-body">
+            <h5 class="card-title"><%= post[i].title %></h5>
+            <div id="post_body">
+            <p class="card-text" ><%= post[i].body.substring(0,70) %> . . . . . . </p>
+            <a class="btn btn-sm btn-light" href="#" role="button">Read more&nbsp; &nbsp; <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <p class="card-text post_details">Posted by - U_ID <%= post[i].userId %><span class="ml-5">Post ID - <%= post[i].id %></span></p>
+          </div>
+        </div>
     
-</form>
+        <% }%>
+      
+        <form method="GET" action="/post/id">
+            <a href="/posts/0"><input class="btn btn-light" type="button" value="1" name="1"/></a>
+            <a href="/posts/10"><input class="btn btn-light" type="button" value="2" name="2"/></a>
+            <a href="/posts/20"><input class="btn btn-light" type="button" value="3" name="3"/></a>
+            <a href="/posts/30"><input class="btn btn-light" type="button" value="4" name="4"/>
+            <a href="/posts/40"><input class="btn btn-light" type="button" value="5" name="5"/>
+            <a href="/posts/50"><input class="btn btn-light" type="button" value="6" name="6"/>
+            <a href="/posts/60"><input class="btn btn-light" type="button" value="7" name="7"/>
+            <a href="/posts/70"><input class="btn btn-light" type="button" value="8" name="8"/>
+            <a href="/posts/80"><input class="btn btn-light" type="button" value="9" name="9"/>
+            <a href="/posts/90"><input class="btn btn-light" type="button" value="10" name="10"/>
+        </form>
+        
+    </div>
+
+
+
 
 </body>
 </html>

@@ -1,9 +1,12 @@
 var express=require("express"),
     request=require("request");
+
+
     
 var app=express();
 var count=0;
 
+app.use(express.static("public"));
 
 
 

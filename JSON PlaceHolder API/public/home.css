@@ -1,3 +1,66 @@
 body{
+    font-family:Montserrat;
+    background-image:url("body_back.jpg");
+    background-size:contain;
+}
+
+.card{
+    width:80%;
+    margin:5% auto;
     text-align:center;
+    
+}
+
+.card-title{
+    text-transform:uppercase;
+    word-spacing:6px;
+    color:rgb(238, 77, 77);
+}
+
+input[type="button"]{
+    width:40px;
+    margin:2% auto 4% auto;
+}
+
+form{
+    text-align:center;
+}
+
+#post_body::first-letter{
+    font-size:25px;
+    text-transform:capitalize;
+}
+
+#post_body{
+    border:1px solid rgba(0,0,0,0.2);
+    padding:3% 3%;
+    margin:2% 2%;
+}
+
+.jumbotron{
+    width:90%;
+    margin:2% auto;
+    background-image:url("https://weeblytutorials.com/wp-content/uploads/2018/10/Weebly-Apps.png");
+}
+
+.header_text{
+    margin-left:60%;
+}
+
+.btn-light{
+    border:none;
+    background:#222222;
+    color:white;
+}
+
+button:hover{
+    color:white;
+}
+
+button:focus{
+    outline: none !important;
+}
+
+.post_details{
+    color:rgba(0,0,0,0.5);
 }
