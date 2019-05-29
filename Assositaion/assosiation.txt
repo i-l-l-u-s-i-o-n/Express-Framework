@@ -1,0 +1,5 @@
+Assosiation can be of 3 type - 
+
+1- one to one ( eg- One Post has one owner)
+2- one to many ( eg- One User can make many posts)
+3- many to many ( eg- Many students can have many courses and many courses can have many students enrolled)
