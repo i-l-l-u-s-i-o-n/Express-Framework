@@ -44,9 +44,20 @@ app.get("/",function(req,res){
 
 // Secret page
 
-app.get("/secret",function(req,res){
+// Using 'middleware', which starts executing at the begining of route and and ends before the final callback.
+app.get("/secret", isLoggedIn, function(req,res){
     res.render("secret")
 })
+
+// Writing custom middleware 
+
+// we can add this function as a middleware as to the secret route so that it can't be sccessed without login.
+function isLoggedIn(req,res,next){
+    if (req.isAuthenticated()) {   // .isAuthenticated() is again the method from passport.
+        return next();
+    }
+    res.redirect("/login");
+}
 
 
 
