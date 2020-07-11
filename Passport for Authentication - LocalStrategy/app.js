@@ -47,7 +47,7 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//=========================== Checking if user is logged in ===========================================================//
+//=========================== Checking if user is logged in ====================================================//
 
 function auth(req, res, next) {
 
