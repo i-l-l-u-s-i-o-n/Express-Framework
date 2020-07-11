@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentRouter = require('./routes/student');
+var facultyRouter = require('./routes/faculty');
 
 
 
@@ -48,8 +49,8 @@ app.use(cookieParser());
 app.use(session({
     name: 'session-id',
     secret: '12312-23123-12321-23112',
-    saveUninitialized: false,
-    resave: false,
+    saveUninitialized: true,
+    resave: true,
     store: new FileStore() // This will create a folder 'sessions' and inside it, a file is created which contains the session information.
 }))
 
@@ -68,6 +69,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/student', studentRouter);
+app.use('/faculty', facultyRouter);
 
 
 

@@ -9,10 +9,10 @@ const router = express.Router();
 
 router.use(bodyParser.json());
 
-// Login form route for student
+// Login form route for faculty
 router.get('/login', (req, res, next) => {
 
-    res.render('login', { actionURL: '/student/login' });
+    res.render('login', { actionURL: '/faculty/login' });
 })
 
 
@@ -24,7 +24,7 @@ router.post('/login', (req, res, next) => {
 
         // Checking for username and pass.
 
-        User.findOne({ username: req.body.username, student: true })
+        User.findOne({ username: req.body.username, faculty: true })
 
 
         .then((user) => {
@@ -37,14 +37,14 @@ router.post('/login', (req, res, next) => {
 
                     // Means user is not registered!
                     req.flash("error", "You are not registered!");
-                    res.redirect('/student/login');
+                    res.redirect('/faculty/login');
 
 
                 } else if (user.password != req.body.password) {
 
                     // Means user has entered wrong password!
                     req.flash("error", "Username and password do not match!");
-                    res.redirect('/student/login');
+                    res.redirect('/faculty/login');
 
 
                 } else if (user.username === req.body.username && user.password === req.body.password) {
@@ -55,10 +55,10 @@ router.post('/login', (req, res, next) => {
                     // So this is the best place we set up our session before going to next set of middleware.
 
                     req.session.user = 'authenticated';
-                    req.session.student = true;
+                    req.session.faculty = true;
                     res.statusCode = 200;
                     req.flash("success", "Welcome " + user.name + "!");
-                    res.redirect('/student/studentHome')
+                    res.redirect('/faculty/facultyHome')
 
                     //===================================================================================================================//
 
@@ -73,29 +73,29 @@ router.post('/login', (req, res, next) => {
     else {
 
         res.statusCode = 200;
-        req.flash("success", "Welcome " + user.name + "!");
-        res.redirect('/student/studentHome');
+        req.flash("success", "Successfully Logged In!");
+        res.render('facultyHome')
 
     }
 });
 
 
 router.get('/signup', (req, res, next) => {
-    res.render('signup', { actionURL: '/student/signup' });
+    res.render('signup', { actionURL: '/faculty/signup' });
 })
 
 // Register User
 router.post('/signup', function(req, res, next) {
 
-    // Make sure that student does not already exists!
+    // Make sure that faculty does not already exists!
     User.findOne({ username: req.body.username })
         .then((user) => {
             if (user != null) {
                 err.status = 403 // forbidden
                 req.flash("error", "Username" + req.body.username + " already exists!");
-                res.redirect('/student/signup');
+                res.redirect('/faculty/signup');
             } else {
-                return User.create({ username: req.body.username, password: req.body.password, name: req.body.name, student: true });
+                return User.create({ username: req.body.username, password: req.body.password, name: req.body.name, faculty: true });
                 // it will return a promise so we have to handle that promise in then.
             }
         })
@@ -103,7 +103,7 @@ router.post('/signup', function(req, res, next) {
         .then((user) => {
             res.statusCode = 200;
             req.flash("success", "Registered Successfully!");
-            res.redirect('/student/studentHome')
+            res.redirect('/faculty/facultyHome')
         })
         .catch((err) => {
             next(err);
@@ -115,38 +115,10 @@ router.post('/signup', function(req, res, next) {
 });
 
 
-
-// Logout User
-
-// Here we are using the 'get' as we do not need to submit any data.
-router.get('/logout', (req, res) => {
-
-    // Checking if session exists or not
-    if (req.session) {
-        // Now removing the session info from server.
-        req.session.destroy();
-
-        // Also deleting cookie from client side
-        // In app.js where we initialized our session, we gave name: 'session-id'. So we have to delete the cookie with name session-id
-        res.clearCookie('session-id');
-
-        // Redirecting user to home page
-        req.flash("success", "Successfully logged out!")
-        res.redirect('/');
-
-    } else {
-        let err = new Error("You are not logged in");
-        err.status = 403;
-        next(err);
-    }
+// faculty home
+router.get('/facultyHome', middleware.isFacultyLoggedIn, (req, res) => {
+    res.render('faculty/facultyHome');
 })
-
-
-// student home
-router.get('/studentHome', middleware.isStudentLoggedIn, (req, res) => {
-    res.render("student/studentHome");
-})
-
 
 
 // logout
@@ -175,4 +147,6 @@ router.get('/logout', (req, res) => {
         next(err);
     }
 })
+
+
 module.exports = router
